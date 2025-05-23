@@ -18,14 +18,37 @@ Inside of your Astro project, you'll see the following folders and files:
 
 ```text
 /
-├── public/
+Zenith -jobs/
+├── public/                      # Archivos estáticos (favicon, robots.txt…)
 │   └── favicon.svg
 ├── src/
-│   ├── layouts/
+│   ├── assets/                  # Imágenes, íconos, fuentes…
+│   │   ├── astro.svg
+│   │   └── background.svg
+│   ├── components/              # Componentes reutilizables
+│   │   ├── JobCard.astro        # Tarjeta de cada oferta
+│   │   ├── Button.astro         # Botón genérico
+│   │   └── FormField.astro      # Campo de formulario
+│   ├── layouts/                 # Layouts de página
 │   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── pages/                   # Rutas públicas
+│   │   ├── index.astro          # Home / listado de ofertas
+│   │   ├── jobs/                # Rutas anidadas para ofertas
+│   │   │   ├── [id].astro       # Detalle de oferta + botón “Postularse”
+│   │   │   └── [id]/apply.astro # Formulario de postulación
+│   │   └── 404.astro            # Página no encontrada
+│   ├── services/                # Lógica de llamada a la API
+│   │   └── api.ts               # fetchJobs(), postApplication()
+│   ├── types/                   # Definiciones de TypeScript
+│   │   └── job.ts               # interface Job, ApplicationPayload…
+│   ├── utils/                   # Helpers (formateos, validaciones…)
+│   │   └── formatDate.ts
+│   └── styles/                  # CSS global o variables
+│       └── global.css
+├── astro.config.mjs
+├── tsconfig.json
+├── package.json
+└── README.md
 ```
 
 To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
@@ -46,3 +69,6 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+
+

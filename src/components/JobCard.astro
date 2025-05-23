@@ -1,0 +1,29 @@
+---
+interface Props {
+  title: string;
+  status?: string;
+  location: string;
+  applications: string;
+  id: string;
+  modality: string;
+  salary: string;
+}
+
+const { title, status, location, applications, id, modality, salary } = Astro.props;
+---
+
+<div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 w-full">
+  {status && <span class="text-sm font-semibold text-red-500">{status}</span>}
+  <h2 class="text-xl font-bold text-gray-800 mb-2">{title}</h2>
+  <div class="mb-4">
+    <p class="text-gray-600"><span class="font-medium">Ubicación:</span> {location}</p>
+    <p class="text-gray-600"><span class="font-medium">Modalidad:</span> {modality}</p>
+    <p class="text-gray-600"><span class="font-medium">Postulaciones:</span> {applications}</p>
+    <p class="text-green-600 font-semibold mt-1"><span class="font-medium text-gray-600">Salario:</span> {salary}</p>
+  </div>
+  <div class="flex justify-end mt-auto">
+    <a href={`/jobs/${id}`} class="bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 transition-colors">
+      Detalles
+    </a>
+  </div>
+</div>
