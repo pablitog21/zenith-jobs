@@ -1,74 +1,125 @@
-# Astro Starter Kit: Basics
+# Zenith Jobs - Portal de Ofertas Laborales
+## 📋 Descripción del Proyecto
+Zenith Jobs es una plataforma moderna para la publicación y gestión de ofertas laborales, diseñada para conectar a candidatos con oportunidades profesionales de manera eficiente. Construida con Astro y TailwindCSS, ofrece una experiencia de usuario fluida y atractiva tanto para reclutadores como para candidatos.
 
-```sh
-npm create astro@latest -- --template basics
+## ✨ Características Principales
+- Listado de Ofertas : Visualización clara y atractiva de todas las ofertas disponibles
+- Detalles de Ofertas : Página detallada para cada posición con información completa
+- Formulario de Postulación : Sistema integrado para que los candidatos apliquen directamente
+- Diseño Responsivo : Experiencia óptima en dispositivos móviles y de escritorio
+- Interfaz Intuitiva : Navegación sencilla y amigable para todos los usuarios
+## 🚀 Estructura del Proyecto
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-Zenith -jobs/
-├── public/                      # Archivos estáticos (favicon, robots.txt…)
-│   └── favicon.svg
-├── src/
-│   ├── assets/                  # Imágenes, íconos, fuentes…
-│   │   ├── astro.svg
-│   │   └── background.svg
-│   ├── components/              # Componentes reutilizables
-│   │   ├── JobCard.astro        # Tarjeta de cada oferta
-│   │   ├── Button.astro         # Botón genérico
-│   │   └── FormField.astro      # Campo de formulario
-│   ├── layouts/                 # Layouts de página
-│   │   └── Layout.astro
-│   ├── pages/                   # Rutas públicas
-│   │   ├── index.astro          # Home / listado de ofertas
-│   │   ├── jobs/                # Rutas anidadas para ofertas
-│   │   │   ├── [id].astro       # Detalle de oferta + botón “Postularse”
-│   │   │   └── [id]/apply.astro # Formulario de postulación
-│   │   └── 404.astro            # Página no encontrada
-│   ├── services/                # Lógica de llamada a la API
-│   │   └── api.ts               # fetchJobs(), postApplication()
-│   ├── types/                   # Definiciones de TypeScript
-│   │   └── job.ts               # interface Job, ApplicationPayload…
-│   ├── utils/                   # Helpers (formateos, validaciones…)
-│   │   └── formatDate.ts
-│   └── styles/                  # CSS global o variables
-│       └── global.css
-├── astro.config.mjs
-├── tsconfig.json
-├── package.json
-└── README.md
+zenith-jobs/
+├── public/                      # Archivos 
+estáticos (favicon, robots.txt…)
+│   └── favicon.svg
+├── src/
+│   ├── assets/                  # 
+Imágenes, íconos, fuentes…
+│   │   ├── astro.svg
+│   │   └── background.svg
+│   ├── components/              # 
+Componentes reutilizables
+│   │   ├── JobCard.astro        # Tarjeta 
+de cada oferta
+│   │   ├── Header.astro         # 
+Encabezado del sitio
+│   │   └── FormField.astro      # Campo de 
+formulario
+│   ├── layouts/                 # Layouts 
+de página
+│   │   └── Layout.astro
+│   ├── pages/                   # Rutas 
+públicas
+│   │   ├── index.astro          # Home / 
+listado de ofertas
+│   │   ├── jobs/                # Rutas 
+anidadas para ofertas
+│   │   │   ├── [id].astro       # Detalle 
+de oferta + formulario
+│   │   │   └── [id]/success.astro # 
+Confirmación de postulación
+│   │   └── 404.astro            # Página 
+no encontrada
+│   ├── services/                # Lógica 
+de negocio
+│   │   └── jobService.ts        # Gestión 
+de ofertas laborales
+│   ├── types/                   # 
+Definiciones de TypeScript
+│   │   └── job.ts               # 
+Interface Job, ApplicationPayload…
+│   └── styles/                  # CSS 
+global o variables
+│       └── global.css
+├── astro.config.mjs
+├── tailwind.config.js
+├── tsconfig.json
+└── package.json
 ```
+## 🛠️ Tecnologías Utilizadas
+- Astro : Framework web para sitios orientados a contenido
+- TailwindCSS : Framework CSS para diseño rápido y responsivo
+- TypeScript : Tipado estático para desarrollo más seguro
+- Componentes Astro : Arquitectura basada en componentes para mejor mantenibilidad
+## 🧞 Comandos Disponibles
+Comando Acción npm install Instala dependencias npm run dev Inicia servidor de desarrollo en localhost:4321 npm run build Construye el sitio para producción en ./dist/ npm run preview Vista previa local de la versión de producción npm run astro ... Ejecuta comandos CLI como astro add , astro check
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🔍 Funcionalidades Principales
+### Listado de Ofertas
+La página principal muestra todas las ofertas laborales disponibles en un formato de tarjetas, mostrando información clave como:
 
-## 🧞 Commands
+- Título del puesto
+- Ubicación
+- Modalidad de trabajo (remoto, presencial, híbrido)
+- Salario
+- Número de postulaciones
+### Detalle de Oferta
+Al hacer clic en una oferta, se accede a una página detallada que incluye:
 
-All commands are run from the root of the project, from a terminal:
+- Descripción completa del perfil requerido
+- Cualidades valoradas en los candidatos
+- Detalles específicos (modalidad, ubicación, salario)
+- Formulario de postulación integrado
+### Proceso de Postulación
+Los candidatos pueden postularse directamente desde la página de detalle de la oferta:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+1. Completar formulario con datos personales
+2. Adjuntar CV en formato PDF
+3. Enviar solicitud
+4. Recibir confirmación de postulación exitosa
+## 🚀 Cómo Empezar
+1. Clona este repositorio
+   
+   ```
+   git clone https://github.com/tu-usuario/
+   zenith-jobs.git
+   cd zenith-jobs
+   ```
+2. Instala las dependencias
+   
+   ```
+   npm install
+   ```
+3. Inicia el servidor de desarrollo
+   
+   ```
+   npm run dev
+   ```
+4. Abre tu navegador en http://localhost:4321
+## 🤝 Contribuciones
+Las contribuciones son bienvenidas. Para contribuir:
 
-## 👀 Want to learn more?
+1. Haz fork del repositorio
+2. Crea una rama para tu feature ( git checkout -b feature/amazing-feature )
+3. Haz commit de tus cambios ( git commit -m 'Add some amazing feature' )
+4. Push a la rama ( git push origin feature/amazing-feature )
+5. Abre un Pull Request
+## 📝 Licencia
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 📞 Contacto
+Para preguntas o sugerencias, por favor contacta a través de correo electrónico o abre un issue en este repositorio.
 
-
-
+Desarrollado con ❤️ usando Astro
